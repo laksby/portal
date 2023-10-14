@@ -11,6 +11,7 @@
     "clean": "gatsby clean",
     "typecheck": "tsc --noEmit",
     "format": "prettier --write .",
+    "prepare": "husky install",
     "pre-commit": "sh .husky/pre-commit"
   },
   "dependencies": {
@@ -25,5 +26,11 @@
     "husky": "^8.0.3",
     "prettier": "^3.0.3",
     "typescript": "^5.1.6"
+  },
+  "husky": {
+    "hooks": {
+      "commit-msg": ".husky/commit-msg",
+      "pre-commit": "sh .husky/pre-commit"
+    }
   }
 }
