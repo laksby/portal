@@ -3,7 +3,7 @@ import type { GatsbyConfig } from 'gatsby';
 const config: GatsbyConfig = {
   siteMetadata: {
     title: `laksby`,
-    siteUrl: `https://www.yourdomain.tld`,
+    siteUrl: `https://laksby.github.io/portal/`,
   },
   graphqlTypegen: true,
   plugins: [],
