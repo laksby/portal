@@ -1,0 +1,20 @@
+[
+  {
+    "index": 0,
+    "project": "ETAS Oscilloscope",
+    "role": "Dev",
+    "product": "Realtime data visualization system for automobile diagnostics",
+    "industry": "Automobile",
+    "activities": ["Feature", "Optimization", "Architecture"],
+    "techs": ["WinForms", "DirectX", "SlimDX"]
+  },
+  {
+    "index": 1,
+    "project": "OCM Web Tools",
+    "role": "Dev",
+    "product": "Complex modular portal providing internal management tools for healthcare information system",
+    "industry": "Medicine",
+    "activities": ["Feature"],
+    "techs": ["WebForms"]
+  }
+]
