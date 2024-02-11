@@ -4,7 +4,7 @@ import type { GatsbyNode } from 'gatsby';
 import path from 'path';
 import React from 'react';
 import { CV } from './src/components';
-import { files } from './src/constants';
+import { paths } from './src/constants';
 
 const staticDir = path.join(__dirname, 'static');
 
@@ -21,7 +21,7 @@ function generateCVFile(): Promise<void> {
     ensureDirSync(staticDir);
 
     const cvDocument = React.createElement(CV);
-    const cvFileName = path.join(staticDir, files.CV_FILE_NAME);
+    const cvFileName = path.join(staticDir, paths.CV_FILE_NAME);
 
     try {
       ReactPDF.render(cvDocument, cvFileName, () => resolve());
