@@ -1,6 +1,6 @@
 module.exports = {
   prefix: 'tw-',
   important: false,
-  content: ['src/pages/**/*.{ts,tsx}'],
+  content: ['src/components/**/*.{ts,tsx}', 'src/pages/**/*.{ts,tsx}'],
   theme: {},
 };
