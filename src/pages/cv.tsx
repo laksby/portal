@@ -1,6 +1,7 @@
 import { PageProps } from 'gatsby';
 import { FC, useEffect, useState } from 'react';
 import { useWindowSize } from 'react-use';
+import { files } from '../constants';
 
 export const CvPage: FC<PageProps> = () => {
   const [pageHeight, setPageHeight] = useState(0);
@@ -12,7 +13,7 @@ export const CvPage: FC<PageProps> = () => {
 
   return (
     <div style={{ height: pageHeight }}>
-      <embed src="/cv.pdf" className="tw-w-full tw-h-full" type="application/pdf" />
+      <embed src={`/${files.CV_FILE_NAME}`} className="tw-w-full tw-h-full" type="application/pdf" />
     </div>
   );
 };
