@@ -1,6 +1,6 @@
 # @laksby Portal
 
-![status](https://github.com/laksby/portal/actions/workflows/gatsby.yaml/badge.svg?branch=master)
+![status](https://github.com/laksby/portal/actions/workflows/gatsby.yml/badge.svg?branch=master)
 
 This repository contains source code for Personal portal of Aliaksandr Savin (@laksby).
 
