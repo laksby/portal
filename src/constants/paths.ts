@@ -1,4 +1,7 @@
 export const paths = {
   GATSBY_PATH_PREFIX: '/portal',
-  CV_FILE_NAME: 'CV_Aliaksandr_Savin.pdf',
+  STATIC_DIR: 'static',
+  FONTS_DIR: 'fonts',
+  IMAGES_DIR: 'images',
+  CV_FILE_PATH: 'CV_Aliaksandr_Savin.pdf',
 };

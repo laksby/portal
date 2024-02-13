@@ -1,15 +1,24 @@
-import ReactPDF from '@react-pdf/renderer';
+import ReactPDF, { DocumentProps } from '@react-pdf/renderer';
 import fs from 'fs';
 import type { GatsbyNode } from 'gatsby';
 import path from 'path';
-import React from 'react';
+import React, { ReactElement } from 'react';
 import { CV } from './src/components';
 import { paths } from './src/constants';
 
-const staticDir = path.join(__dirname, 'static');
+const staticDir = path.join(__dirname, paths.STATIC_DIR);
 
 export const onPreBootstrap: GatsbyNode['onPreBootstrap'] = () => {
   return generateCVFile();
+};
+
+export const createPages: GatsbyNode['createPages'] = args => {
+  if (process.env.NODE_ENV === 'development') {
+    args.actions.createPage({
+      path: '/cv-dev',
+      component: path.resolve('./src/components/CV/pages/CVPreviewPage.tsx'),
+    });
+  }
 };
 
 /**
@@ -20,11 +29,11 @@ function generateCVFile(): Promise<void> {
   return new Promise((resolve, reject) => {
     ensureDirSync(staticDir);
 
-    const cvDocument = React.createElement(CV);
-    const cvFileName = path.join(staticDir, paths.CV_FILE_NAME);
+    const cvDocument = React.createElement(CV, { staticDir });
+    const cvFileName = path.join(staticDir, paths.CV_FILE_PATH);
 
     try {
-      ReactPDF.render(cvDocument, cvFileName, () => resolve());
+      ReactPDF.render(cvDocument as ReactElement<DocumentProps>, cvFileName, () => resolve());
     } catch (error) {
       reject(error);
     }

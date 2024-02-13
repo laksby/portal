@@ -14,7 +14,11 @@ export const CvPage: FC<PageProps> = () => {
   return (
     <div style={{ height: pageHeight }}>
       <embed
-        src={`${paths.GATSBY_PATH_PREFIX}/${paths.CV_FILE_NAME}`}
+        src={
+          process.env.NODE_ENV === 'development'
+            ? `/${paths.CV_FILE_PATH}`
+            : `${paths.GATSBY_PATH_PREFIX}/${paths.CV_FILE_PATH}`
+        }
         className="tw-w-full tw-h-full"
         type="application/pdf"
       />

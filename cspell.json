@@ -1,5 +1,20 @@
 {
   "version": "0.2",
   "language": "en",
-  "words": ["Aliaksandr", "cssnano", "EPAM", "laksby", "Parens", "Savin", "tailwindcss", "typecheck", "Typegen"]
+  "words": [
+    "Aliaksandr",
+    "Antd",
+    "cssnano",
+    "EPAM",
+    "Formik",
+    "laksby",
+    "Linaria",
+    "Parens",
+    "PIXI",
+    "Savin",
+    "tailwindcss",
+    "typecheck",
+    "Typegen",
+    "Zustand"
+  ]
 }
