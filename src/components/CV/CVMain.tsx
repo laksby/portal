@@ -3,6 +3,8 @@ import { FC, Fragment, useMemo } from 'react';
 import { paths } from '../../constants';
 import { CVRating } from './CVRating';
 import { CVTech } from './CVTech';
+import { CVTechList } from './CVTechList';
+import { CVBullet } from './CVBullet';
 
 interface Props {
   staticDir: string;
@@ -47,32 +49,29 @@ export const CVMain: FC<Props> = props => {
         ))}
       </View>
 
+      <Text style={styles.summary}>
+        Seasoned software developer with <Text style={styles.strong}>{yearsExperience}+ years of experience</Text>,
+        focusing on frontend development, but having experience also in backend. Profound programming acumen and a
+        versatile skill set that spans across various aspects of software engineering.{' '}
+        <Text style={styles.strong}>Committed to excellence</Text>. Exceptional{' '}
+        <Text style={styles.strong}>problem-solving</Text> skills, capable of tackling challenges with innovative,
+        efficient and elegant solutions. <Text style={styles.strong}>Leadership capabilities</Text> in guiding team
+        towards project goals, mentoring junior developers, and fostering a collaborative work environment. Continuously
+        exploring <Text style={styles.strong}>new technologies</Text> and methodologies to push the boundaries of what's
+        possible in software creation.
+      </Text>
+
       <View style={styles.divider} />
 
+      <Text style={styles.heading2}>What can I do</Text>
       {[
-        <>
-          Seasoned software developer with <Text style={styles.strong}>{yearsExperience}+ years of experience</Text>,
-          focusing on frontend development, but having experience also in backend
-        </>,
-        <>
-          Profound programming acumen and a versatile skill set that spans across various aspects of software
-          engineering. <Text style={styles.strong}>Committed to excellence</Text>
-        </>,
-        <>
-          Exceptional <Text style={styles.strong}>problem-solving</Text> skills, capable of tackling challenges with
-          innovative, efficient and elegant solutions
-        </>,
-        <>
-          <Text style={styles.strong}>Leadership capabilities</Text> in guiding team towards project goals, mentoring
-          junior developers, and fostering a collaborative work environment
-        </>,
-        <>
-          Continuously exploring <Text style={styles.strong}>new technologies</Text> and methodologies to push the
-          boundaries of what's possible in software creation
-        </>,
+        'Develop application of any level of complexity without requirements, tasks, analysis, design or even without backend team. Ready to work in complete chaos. I can craft this chaos into beautiful gem',
+        'Migrate any frontend technology to modern React ecosystem. Migrate to TypeScript. Establish code quality and automated linting',
+        'Develop frontend standards, code quality rules and corporate level tools including project templates, corporate component libraries and CLI utilities',
+        'Guide, mentor and event train the frontend development team. I have training experience and even developed author course',
       ].map((summaryNote, index) => (
         <Text key={index} style={styles.summary}>
-          <Text style={styles.bullet}>■</Text> {summaryNote}
+          <CVBullet /> {summaryNote}
         </Text>
       ))}
 
@@ -87,85 +86,72 @@ export const CVMain: FC<Props> = props => {
               name: 'JavaScript Programming',
               since: 2012,
               level: 'Expert',
-              experience: 'Commercial',
             },
             {
               name: 'TypeScript Programming',
               since: 2013,
               level: 'Expert',
-              experience: 'Commercial',
             },
             {
               name: 'React / React-Router / NextJS',
               since: 2016,
               level: 'Expert',
-              experience: 'Commercial',
             },
             {
               name: 'React State Management: Redux / MobX / Zustand',
               since: 2016,
               level: 'Expert',
-              experience: 'Commercial',
             },
             {
               name: 'React Forms: Formik / react-hook-form',
               since: 2018,
               level: 'Expert',
-              experience: 'Commercial',
             },
             {
               name: 'React Components: Antd, Material, Blueprint',
               since: 2016,
               level: 'Expert',
-              experience: 'Commercial',
             },
             {
+              break: true,
               name: 'Styling: CSS / SCSS / LESS / PostCSS',
               since: 2010,
               level: 'Expert',
-              experience: 'Commercial',
             },
             {
               name: 'Styling Libraries: Tailwind / StyledComponents / Linaria',
               since: 2014,
               level: 'Expert',
-              experience: 'Commercial',
             },
             {
               name: 'Markup Languages: HTML / Pug / Handlebars',
               since: 2010,
               level: 'Expert',
-              experience: 'Commercial',
             },
             {
               name: 'Markup Techniques: Semantic / Responsive / Print',
               since: 2016,
               level: 'Expert',
-              experience: 'Commercial',
             },
             {
               name: 'Web Browser APIs',
               since: 2016,
               level: 'Expert',
-              experience: 'Commercial',
             },
             {
               name: 'Gatsby',
               since: 2020,
               level: 'Advanced',
-              experience: 'Personal',
             },
             {
               name: 'GraphQL',
               since: 2021,
               level: 'Intermediate',
-              experience: 'Commercial',
             },
             {
               name: 'Chrome DevTools / Puppeteer / Lighthouse / Profiling',
               since: 2017,
               level: 'Advanced',
-              experience: 'Commercial',
             },
           ],
         },
@@ -176,67 +162,46 @@ export const CVMain: FC<Props> = props => {
               name: 'Code Quality / Unit Testing / Linting',
               since: 2014,
               level: 'Expert',
-              experience: 'Commercial',
             },
             {
               name: 'Building: Webpack, CRA, ESBuild, Rollup, Vite',
               since: 2016,
               level: 'Expert',
-              experience: 'Commercial',
             },
             {
               name: 'WebGL / ThreeJS',
               since: 2013,
               level: 'Advanced',
-              experience: 'Commercial',
-            },
-            {
-              name: 'PIXI',
-              since: 2019,
-              level: 'Advanced',
-              experience: 'Personal',
-            },
-            {
-              name: 'Private NPM Package Management',
-              since: 2021,
-              level: 'Advanced',
-              experience: 'Commercial',
             },
             {
               name: 'Node / Express',
               since: 2014,
               level: 'Advanced+',
-              experience: 'Commercial',
             },
             {
               name: 'OOP / Design Patterns',
               since: 2010,
               level: 'Expert',
-              experience: 'Commercial',
             },
             {
               name: 'Docker / Devops / AWS / Cloud / CI',
               since: 2018,
               level: 'Intermediate',
-              experience: 'Commercial',
             },
             {
               name: 'git / git-flow / GitHub / GitLab',
               since: 2013,
               level: 'Expert',
-              experience: 'Commercial',
             },
             {
               name: 'Networking / Hosting / DNS / Internet',
               since: 2010,
               level: 'Advanced',
-              experience: 'Commercial',
             },
             {
               name: 'UI / UX Principles / UI Design',
               since: 2016,
               level: 'Intermediate',
-              experience: 'Commercial',
             },
           ],
         },
@@ -245,7 +210,7 @@ export const CVMain: FC<Props> = props => {
           <Text style={styles.heading3}>{skillGroup.group}</Text>
           <View style={styles.technologies}>
             {skillGroup.techs.map(tech => (
-              <View key={tech.name}>
+              <View key={tech.name} break={tech.break}>
                 <View style={styles.technologyHeading}>
                   <Text>{tech.name}</Text>
                   <View style={styles.technologyHeadingFiller} />
@@ -255,8 +220,6 @@ export const CVMain: FC<Props> = props => {
                 </View>
                 <View style={styles.technologyDetails}>
                   <Text>{tech.level} level</Text>
-                  <Text>|</Text>
-                  <Text>{tech.experience} experience</Text>
                 </View>
               </View>
             ))}
@@ -305,13 +268,67 @@ export const CVMain: FC<Props> = props => {
                 'Vehicle history reporting service that provides detailed information on vehicle past, including ownership, accidents, repairs, and maintenance records, aiding consumers in making informed decisions on used car purchases',
               techs: ['React', 'TypeScript', 'MobX', 'Puppeteer', 'Styled', 'NextJS'],
             },
+            {
+              name: 'HH Global',
+              description:
+                'Global marketing services group, specializing in the execution of print, digital, and retail media. Renowned for delivering innovative, sustainable solutions through a unique model of collaboration and efficiency, HH Global partners with some of the world most prominent brands to optimize their marketing spend, drive down costs, and implement creative strategies that engage audiences and grow business',
+              techs: ['React', 'TypeScript', 'MobX', 'Redux', 'MaterialUI'],
+            },
+            {
+              name: 'StyleRow',
+              description:
+                'Innovative platform designed for the interior design industry. StyleRow offers a comprehensive suite of tools for designers, brands, and showrooms to streamline project management, product sourcing, and collaboration',
+              techs: ['Angular', 'TypeScript', 'RxJS'],
+            },
+            {
+              name: 'CREXi',
+              description:
+                'Commercial real estate (CRE) platform that revolutionizes property transactions and leasing processes. CREXi leverages advanced technology to provide an all-encompassing marketplace, facilitating seamless communication between buyers, sellers, and brokers',
+              techs: ['Angular', 'TypeScript', 'RxJS', 'LESS', 'Pug'],
+            },
+            {
+              name: 'Bridg',
+              description:
+                'Pioneering platform designed to transform customer data into actionable marketing insights for the retail and hospitality sectors',
+              techs: ['React', 'Redux', 'MaterialUI', 'Styled'],
+            },
+            {
+              name: 'DailyKARMA',
+              description:
+                'Platform dedicated to empowering individuals and organizations to engage in philanthropy and social impact initiatives',
+              techs: ['React', 'Angular', 'Redux', 'NextJS'],
+            },
           ],
+        },
+        {
+          break: true,
+          company: 'TulaCo',
+          start: 'Dec 2012',
+          end: 'Aug 2016',
+          title: 'Senior / Lead Fullstack (.NET) Developer',
+          roles: [
+            'Led several .NET teams comprising up to 10 members, orchestrating development efforts, and driving the successful execution of complex projects',
+            'Managed the development of an online clothing design system, spearheading the creation of a comprehensive graphic platform that enables users to customize and visualize apparel designs interactively',
+            'Participated in a project for the Hollywood film industry, collaborating with a diverse team to deliver cutting-edge solutions tailored to the unique demands of entertainment professionals',
+          ],
+          projects: [],
+        },
+        {
+          company: 'EPAM',
+          start: 'Apr 2010',
+          end: 'Nov 2012',
+          title: 'Fullstack (.NET) Developer',
+          roles: [
+            'Worked on a project for a company providing national-level medical services in the USA, playing a key role in developing solutions aimed at enhancing healthcare delivery and patient experience',
+            'Participated in the development of an Optical Character Recognition (OCR) system, contributing to the creation of advanced algorithms for accurate text detection and digitization',
+          ],
+          projects: [],
         },
       ].map(experience => (
         <Fragment key={`${experience.company} - ${experience.title}`}>
-          <View style={styles.headingWithBookmark}>
+          <View style={styles.headingWithBookmark} break={experience.break}>
             <View style={styles.bookmark}>
-              <Text style={styles.bullet}>■</Text>
+              <CVBullet />
               <Text>
                 {experience.start} - {experience.end}
               </Text>
@@ -323,23 +340,25 @@ export const CVMain: FC<Props> = props => {
           <View style={styles.companyRoles}>
             {experience.roles.map(role => (
               <Text key={role}>
-                <Text style={styles.bullet}>■</Text> {role}
+                <CVBullet /> {role}
               </Text>
             ))}
           </View>
-          <View style={styles.companyProjects}>
-            {experience.projects.map(project => (
-              <View key={project.name} break>
-                <Text style={styles.companyProject}>Project: {project.name}</Text>
-                <Text style={styles.companyProjectDescription}>{project.description}</Text>
-                <View style={styles.companyProjectTechnologies}>
-                  {project.techs.map(tech => (
-                    <CVTech key={tech} tech={tech} />
-                  ))}
+          {experience.projects.length > 0 && (
+            <View style={styles.companyProjects}>
+              {experience.projects.map(project => (
+                <View key={project.name}>
+                  <Text style={styles.companyProject}>Project: {project.name}</Text>
+                  <Text style={styles.companyProjectDescription}>{project.description}</Text>
+                  <CVTechList>
+                    {project.techs.map(tech => (
+                      <CVTech key={tech} tech={tech} />
+                    ))}
+                  </CVTechList>
                 </View>
-              </View>
-            ))}
-          </View>
+              ))}
+            </View>
+          )}
         </Fragment>
       ))}
     </View>
@@ -357,16 +376,14 @@ const styles = StyleSheet.create({
     color: '#2196F3',
   },
   heading2: {
-    marginTop: 8,
-    marginBottom: 8,
+    paddingVertical: 8,
     fontSize: 20,
     fontWeight: 'light',
     color: '#2196F3',
     textTransform: 'uppercase',
   },
   heading3: {
-    marginTop: 16,
-    marginBottom: 16,
+    paddingVertical: 16,
     fontSize: 16,
     fontWeight: 'medium',
     color: '#2196F3',
@@ -387,11 +404,13 @@ const styles = StyleSheet.create({
     paddingRight: 2,
   },
   links: {
+    paddingVertical: 8,
     fontSize: 12,
-    marginTop: 8,
+    alignItems: 'stretch',
+    flexDirection: 'column',
+    gap: 8,
   },
   link: {
-    marginTop: 8,
     flexDirection: 'row',
     alignItems: 'center',
     gap: 4,
@@ -411,7 +430,7 @@ const styles = StyleSheet.create({
     textAlign: 'justify',
   },
   companyProjects: {
-    marginTop: 16,
+    paddingTop: 16,
     flexDirection: 'column',
     alignItems: 'stretch',
     gap: 8,
@@ -423,16 +442,9 @@ const styles = StyleSheet.create({
     color: '#474747',
   },
   companyProjectDescription: {
-    marginTop: 4,
+    paddingVertical: 4,
     fontSize: 10,
     color: '#474747',
-  },
-  companyProjectTechnologies: {
-    marginTop: 4,
-    alignItems: 'center',
-    flexDirection: 'row',
-    flexWrap: 'wrap',
-    gap: 4,
   },
   linkRef: {
     color: '#2196F3',
@@ -441,7 +453,7 @@ const styles = StyleSheet.create({
     height: 16,
   },
   highlights: {
-    marginTop: 8,
+    paddingTop: 8,
     flexDirection: 'row',
     alignItems: 'center',
     gap: 4,
@@ -450,12 +462,9 @@ const styles = StyleSheet.create({
     opacity: 0.25,
   },
   summary: {
-    marginTop: 8,
+    paddingTop: 8,
     fontSize: 12,
     textAlign: 'justify',
-  },
-  bullet: {
-    color: '#2196F3',
   },
   technologies: {
     flexDirection: 'column',

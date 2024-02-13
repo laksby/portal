@@ -23,7 +23,7 @@ const styles = StyleSheet.create({
     fontFamily: 'Inter',
     fontSize: 14,
     color: '#262626',
-    paddingVertical: 16,
+    paddingTop: 16,
   },
   sidebar: {
     position: 'absolute',
