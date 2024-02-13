@@ -17,7 +17,7 @@ export const CVSidebar: FC<Props> = props => {
     <View style={styles.root}>
       <View style={styles.photoSection}>
         <View style={styles.photoContainer}>
-          <Image source={`${staticDir}/${paths.IMAGES_DIR}/photo_001.jpg`} style={styles.photo} />
+          <Image source={`${staticDir}/${paths.IMAGES_DIR}/photo_001.png`} style={styles.photo} />
         </View>
       </View>
       <View style={styles.divider} />
