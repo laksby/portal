@@ -52,3 +52,23 @@ npm run format
 ```
 
 **IMPORTANT!** Project uses [Husky](https://github.com/typicode/husky) for automated code formatting on commit.
+
+## Theme
+
+- [Sidebar icon set](https://www.iconfinder.com/search?q=&iconset=google-material-design-3-0)
+- [Main icon set](https://www.iconfinder.com/search?q=&iconset=font-awesome)
+- [Color palette](https://materialui.co/colors/)
+
+### Custom palette
+
+| Gray    |
+| ------- |
+| #262626 |
+| #303030 |
+| #474747 |
+| #5E5E5E |
+| #6F6F6F |
+| #949494 |
+| #A8A8A8 |
+| #C2C2C2 |
+| #E8E8E8 |
